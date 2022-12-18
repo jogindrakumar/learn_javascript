@@ -9,7 +9,21 @@
 </head>
 
 <body>
+    <h1>Javascript sets</h1>
+    <p>Add Values to a Set</p>
 
+    <p id="demo"></p>
+    <script>
+        // create a set
+        const letters = new Set();
+        //Add values to the Set
+        letters.add("a");
+        letters.add("b");
+        letters.add("c");
+        //Display Set Size
+        document.getElementById("demo")
+            .innerHTML = letters.size;
+    </script>
 </body>
 
 </html>
