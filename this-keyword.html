@@ -6,10 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>This Keyword - Javascript</title>
+    <style>
+        body {
+            margin-left: 50px;
+        }
+    </style>
 </head>
 
 <body>
-
+    <h1>the Javascript <i>this</i> keyword
+    </h1>
+    <p>in this example,
+        <b>this</b>refers to the <b>person</b> object
+    </p>
+    <p>because <b>FullName</b> is a method of the person object</p>
+    <p id="demo"></p>
+    <script>
+        //create an object
+        const person = {
+            firstName: "jogindra",
+            lastName: "Kumar",
+            id: 1002,
+            fullName: function() {
+                return this.firstName + " " +
+                    this.lastName;
+            }
+        };
+        // Display data from the object;
+        document.getElementById("demo")
+            .innerHTML = person.fullName();
+    </script>
 </body>
 
 </html>
