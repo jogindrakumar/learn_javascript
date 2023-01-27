@@ -6,9 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Functions</title>
+    <style>
+        body {
+            margin-left: 50px;
+        }
+        
+        #demo {
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
+    <h1>The Arrow Function in Javascript</h1>
+    <p>this example show the syntax of arrow function how to use it.
+    </p>
+    <p id="demo"></p>
+    <script>
+        let hello = "";
+        hello = () => {
+            return "Hello World";
+        }
+        document.getElementById("demo")
+            .innerHTML = hello();
+    </script>
+
 
 </body>
 
