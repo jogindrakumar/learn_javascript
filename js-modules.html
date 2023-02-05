@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>javascript Modules</title>
     <style>
+        body {
+            margin-left: 50px;
+        }
+        
         #demo {
             color: red;
             font-size: 1.4rem;
@@ -15,10 +19,15 @@
 </head>
 
 <body>
-    <h5>javascript Modules</h5>
-    <p>JavaScript modules allow you to break up your code into separate files</p>
-    <br>
+    <h2>javascript Modules</h2>
+    <p>JavaScript modules allow you to break up </p>
+    <p>your code into separate files</p>
+
     <p>This makes it easier to maintain a code-base.</p>
+    <p id="demo"></p>
+    <script type="module">
+        import message from "./message.js"; document.getElementById("demo") .innerHTML = message();
+    </script>
 
 </body>
 
