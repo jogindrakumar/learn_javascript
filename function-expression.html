@@ -21,8 +21,16 @@
 <body>
     <h2>A JavaScript function can also be </h2>
     <h2>defined using an expression.</h2>
-    <p>A function expression can be </p>
-    <p>stored in a variable:</p>
+    <h1><b> A function expression can be</b> </h1>
+    <h1> <b>stored in a variable:</b> </h1>
+    <p id="demo"></p>
+    <script>
+        const x = function(a, b) {
+            return a * b
+        };
+        document.getElementById("demo")
+            .innerHTML = x;
+    </script>
 
 </body>
 
