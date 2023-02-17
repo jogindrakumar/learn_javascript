@@ -6,9 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Self-Invoking Functions</title>
+    <style>
+        body {
+            margin-left: 50px;
+        }
+        
+        #demo {
+            color: red;
+            font-size: 1.5rem;
+        }
+    </style>
 </head>
 
 <body>
+    <h1>Javascript Functions</h1>
+    <p>Functions can be invoked </p>
+    <p> automatically without being called:</p>
+    <p id="demo"></p>
+    <script>
+        (function() {
+            document.getElementById("demo")
+                .innerHTML = "Hello !I Called myself";
+
+        })();
+    </script>
 
 </body>
 
