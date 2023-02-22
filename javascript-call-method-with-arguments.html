@@ -6,9 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>call() Method with Arguments</title>
+    <style>
+        body {
+            margin-left: 50px;
+        }
+        
+        #demo {
+            color: red;
+            font-size: 1.5rem;
+        }
+    </style>
 </head>
 
 <body>
+    <h2>JavaScript Functions</h2>
+    <p>This example calls the fullName method </p>
+    <p> of person, using it on person1:</p>
+    <p id="demo"></p>
+    <script>
+        const person = {
+            fullName: function(city, country) {
+                return this.firstName +
+                    this.lastName +
+                    " ," + city +
+                    " ," + country;
+            }
+        }
+        const person1 = {
+            firstName: "John",
+            lastName: "Doe"
+        }
+        const person2 = {
+            firstName: "Deepika",
+            lastName: "Singh"
+        }
+        document.getElementById("demo")
+            .innerHTML = person.fullName.call(
+                person1, "Jogindra", "Kumar"
+            );
+    </script>
+
 
 </body>
 
