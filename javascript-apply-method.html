@@ -6,9 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript apply() Method</title>
+    <style>
+        body {
+            margin-left: 50px;
+        }
+        
+        #demo {
+            color: red;
+            font-size: 2rem;
+        }
+    </style>
 </head>
 
 <body>
+    <h2>JavaScript Functions</h2>
+    <p>In this example the fulllName method </p>
+    <p> of person is <b>applied</b> on person1:</p>
+    <p id="demo"></p>
+    <script>
+        const person = {
+            fullName: function() {
+                return this.firstName +
+                    " " + this.lastName;
+            }
+        }
+        const person1 = {
+            firstName: "Jogindra",
+            lastName: "kumar"
+        }
+        document.getElementById("demo")
+            .innerHTML = person.fullName.apply(person1);
+    </script>
 
 </body>
 
