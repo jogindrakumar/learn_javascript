@@ -6,13 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The apply() Method with Arguments</title>
+    <style>
+        body {
+            margin-left: 40px;
+        }
+        
+        #demo {
+            color: red;
+            font-size: 1.5rem;
+        }
+    </style>
 </head>
 
 <body>
     <h2>JavaScript Functions</h2>
     <p>In this example the fulllName method </p>
     <p> of person is <b>applied</b> on person1:</p>
+    <p id="demo"></p>
+    <script>
+        const person = {
+            fullName: function(city, country) {
+                return this.firstName +
+                    " " + this.lastName +
+                    ", " + city + "," +
+                    country;
+            }
+        }
+        const person1 = {
+            firstName: "john",
+            lastName: "Doe"
+        }
+        document.getElementById("demo")
+            .innerHTML = person.fullName.apply(
+                person1, ["India", "Goa"]
+            );
+    </script>
 
+    </script>
 </body>
 
 </html>
