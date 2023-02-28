@@ -6,9 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Function bind()</title>
+    <style>
+        body {
+            margin-left: 40px;
+        }
+        
+        #demo {
+            color: red;
+            font-size: 2rem;
+        }
+    </style>
 </head>
 
 <body>
+    <h1>JavaScript Function bind()</h1>
+
+    <p>This example creates 2 objects </p>
+    <p> (person and member).</p>
+    <p>The member object borrows </p>
+    <p> the fullname method from person:</p>
+    <p id="demo"></p>
+    <script>
+        const person = {
+            firstName: "Deepika",
+            lastName: "Singh",
+            fullName: function() {
+                return this.firstName +
+                    " " + this.lastName;
+            }
+        }
+        const member = {
+            firstName: "jogindra",
+            lastName: "Kumar",
+        }
+        let fullName = person.fullName.bind(member);
+        document.getElementById("demo")
+            .innerHTML = fullName();
+    </script>
 
 </body>
 
