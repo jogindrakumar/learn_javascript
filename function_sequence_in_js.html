@@ -19,6 +19,28 @@
 </head>
 
 <body>
+    <h1>JavaScript Functions</h1>
+    <h2>Function Sequence</h2>
+    <p>JavaScript functions are executed </p>
+    <p> in the sequence they are called.</p>
+    <p id="demo"></p>
+    <script>
+        function myDisplayer(some) {
+            document.getElementById("demo")
+                .innerHTML = some;
+        }
+
+        function myFirst() {
+            myDisplayer("Hello");
+
+        }
+
+        function mySecond() {
+            myDisplayer("have a good day");
+        }
+        myFirst();
+        mySecond();
+    </script>
 
 </body>
 
