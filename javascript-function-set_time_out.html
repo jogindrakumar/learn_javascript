@@ -6,9 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> JavaScript function setTimeout()</title>
+    <style>
+        body {
+            margin-left: 40px;
+        }
+        
+        #demo {
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
+    <h1>JavaScript Functions</h1>
+    <h2>setTimeout() with a Callback</h2>
+
+    <p>Wait 3 seconds (3000 milliseconds)</p>
+    <p> for this page to change.</p>
+    <h1 id="demo"></h1>
+    <script>
+        setTimeout(myFunction, 3000);
+
+        function myFunction() {
+            document.getElementById("demo")
+                .innerHTML = "I Love You !!";
+        }
+    </script>
 
 </body>
 
