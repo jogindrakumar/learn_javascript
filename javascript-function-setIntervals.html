@@ -6,9 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript function setInterval()</title>
+    <style>
+        body {
+            margin-left: 40px;
+        }
+        
+        #demo {
+            color: red;
+            font-size: 2rem;
+        }
+    </style>
 </head>
 
 <body>
+    <h1>JavaScript Functions</h1>
+    <h2>setInterval() with a Callback</h2>
+
+    <p>Using setInterval() to display the time </p>
+    <p> every second (1000 milliseconds).</p>
+    <h1 id="demo"></h1>
+    <script>
+        setInterval(myFunction, 1000);
+
+        function myFunction() {
+            let d = new Date();
+            document.getElementById("demo")
+                .innerHTML =
+                d.getHours() + " :" +
+                d.getMinutes() + " : " +
+                d.getSeconds();
+        }
+    </script>
 
 </body>
 
