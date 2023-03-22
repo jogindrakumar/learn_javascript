@@ -6,16 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Await Syntax</title>
+    <style>
+        body {
+            margin-left: 20px;
+        }
+        
+        #demo {
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
-    <h2>The await keyword can only be used
-        <br> inside an async function.</h2>
-    <h2>
+    <h3>The await keyword can only be used
+        <br> inside an async function.</h3>
+    <h3>
         The await keyword makes the function pause
         <br> the execution and wait for a resolved promise
         <br> before it continues:
-    </h2>
+    </h3>
+    <h1 id="demo"></h1>
+    <script>
+        async function myDisplay() {
+            let myPromise =
+                new Promise(function(resolve, reject) {
+                    resolve("like share Subscribe !!");
+                });
+            document.getElementById("demo")
+                .innerHTML = await myPromise;
+        }
+        myDisplay();
+    </script>
 
 </body>
 
